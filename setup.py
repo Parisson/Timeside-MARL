@@ -63,6 +63,7 @@ setup(
     keywords=KEYWORDS,
     include_package_data=True,
     zip_safe=False,
+    packages = find_packages(),
    # Tests
     tests_require=['pytest'],
     cmdclass={'test': PyTest},

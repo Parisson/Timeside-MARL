@@ -17,12 +17,12 @@ FROM parisson/timeside:latest-dev
 
 MAINTAINER Guillaume Pellerin <yomguy@parisson.com>, Thomas Fillon <thomas@parisson.com>
 
-RUN if [ ! -d /srv/src/ ]; then mkdir /srv/src/; fi
-RUN mkdir /srv/src/timeside-dummy
-WORKDIR /srv/src/timeside-dummy
+RUN if [ ! -d /srv/lib/ ]; then mkdir /srv/lib/; fi
+RUN mkdir /srv/lib/timeside-dummy
+WORKDIR /srv/lib/timeside-dummy
 
 # Clone app
-ADD . /srv/src/timeside-dummy/
+ADD . /srv/lib/timeside-dummy/
 
 RUN pip install pyyaml
 RUN pip install librosa==0.7.0
