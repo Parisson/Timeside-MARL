@@ -40,7 +40,7 @@ class NYUMelSpectrogam(Analyzer):
               blocksize=None,
               totalframes=None):
         super(NYUMelSpectrogam, self).setup(channels, samplerate, blocksize, totalframes)
-        totalblocks = (self.totalframes() - self.input_blocksize) / self.input_stepsize + 2
+        totalblocks = (self.totalframes() - self.input_blocksize) // self.input_stepsize + 2
         self.values = np.empty([totalblocks, self.n_mels])
 
 
