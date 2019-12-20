@@ -34,7 +34,7 @@ class NYUVGGishMelSpectrogam(Analyzer):
               blocksize=None,
               totalframes=None):
         super(NYUVGGishMelSpectrogam, self).setup(channels, samplerate, blocksize, totalframes)
-        totalblocks = (self.totalframes() - self.input_blocksize) / self.input_stepsize + 2
+        totalblocks = (self.totalframes() - self.input_blocksize) // self.input_stepsize + 2
         self.values = np.empty([totalblocks, 64])
 
 
