@@ -36,8 +36,8 @@ class NYULinearSpectrogam(Analyzer):
               blocksize=None,
               totalframes=None):
         super(NYULinearSpectrogam, self).setup(channels, samplerate, blocksize, totalframes)
-        totalblocks = (self.totalframes() - self.input_blocksize) / self.input_stepsize + 2
-        self.values = np.empty([totalblocks, self.fft_size / 2 + 1])
+        totalblocks = (self.totalframes() - self.input_blocksize) // self.input_stepsize + 2
+        self.values = np.empty([totalblocks, self.fft_size // 2 + 1])
 
 
     @staticmethod
