@@ -7,7 +7,7 @@ from timeside.core.analyzer import Analyzer
 from timeside.core.api import IAnalyzer
 import numpy as np
 
-from features import logspec, _logspec_matrix
+from .features import logspec, _logspec_matrix
 
 
 class NYULogSpectrogam(Analyzer):

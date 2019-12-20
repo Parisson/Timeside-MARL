@@ -17,8 +17,8 @@ from librosa.filters import get_window
 from librosa.core.audio import resample
 from librosa import util
 
-from vggish import mel_features
-from vggish import vggish_params
+from .vggish import mel_features
+from .vggish import vggish_params
 
 from multiprocessing import Pool
 

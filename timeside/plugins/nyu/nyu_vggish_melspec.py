@@ -7,7 +7,7 @@ from timeside.core.analyzer import Analyzer
 from timeside.core.api import IAnalyzer
 import numpy as np
 
-from features import vggish_melspec, vggish_params
+from .features import vggish_melspec, vggish_params
 
 
 class NYUVGGishMelSpectrogam(Analyzer):

@@ -7,7 +7,7 @@ from timeside.core.analyzer import Analyzer
 from timeside.core.api import IAnalyzer
 import numpy as np
 
-from features import linspec
+from .features import linspec
 
 
 class NYULinearSpectrogam(Analyzer):
