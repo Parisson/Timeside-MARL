@@ -60,7 +60,7 @@ class NYUHCQT(Analyzer):
               blocksize=None,
               totalframes=None):
         super(NYUHCQT, self).setup(channels, samplerate, blocksize, totalframes)
-        totalblocks = (self.totalframes() - self.input_blocksize) / self.input_stepsize + 2
+        totalblocks = (self.totalframes() - self.input_blocksize) // self.input_stepsize + 2
         self.values = np.empty([totalblocks, len(self.harmonics), self.bins_per_octave * self.n_octaves])
 
 
