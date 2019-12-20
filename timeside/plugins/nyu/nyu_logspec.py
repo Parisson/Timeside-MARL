@@ -42,7 +42,7 @@ class NYULogSpectrogam(Analyzer):
               blocksize=None,
               totalframes=None):
         super(NYULogSpectrogam, self).setup(channels, samplerate, blocksize, totalframes)
-        totalblocks = (self.totalframes() - self.input_blocksize) / self.input_stepsize + 2
+        totalblocks = (self.totalframes() - self.input_blocksize) // self.input_stepsize + 2
         self.values = np.empty([totalblocks, self.bins_per_octave * self.n_octaves])
         self.log_mat = _logspec_matrix(self.bins_per_octave,
                                        self.n_octaves * self.bins_per_octave,
